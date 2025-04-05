@@ -1,0 +1,33 @@
+{
+  "name": "react-video-mcp-server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "inspect": "tsc && npx @modelcontextprotocol/inspector node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaChiJ/react-video-mcp-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CaChiJ/react-video-mcp-server/issues"
+  },
+  "homepage": "https://github.com/CaChiJ/react-video-mcp-server#readme",
+  "description": "",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "@remotion/bundler": "^4.0.286",
+    "@remotion/renderer": "^4.0.286",
+    "remotion": "^4.0.286"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/uuid": "^10.0.0",
+    "typescript": "^5.8.3"
+  }
+}
