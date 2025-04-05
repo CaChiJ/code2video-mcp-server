@@ -1,13 +1,30 @@
-# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+app:
+  name: React Code to Video
+  version: 1.0.2
+
+build:
+  type: docker
+  dockerfile: ./Dockerfile
+
+deploy:
+  port: 3000
+  
+  health:
+    path: /health
+    port: 3000
+
+  resources:
+    memory: 512
+    cpu: 1 
 
 startCommand:
   type: stdio
   configSchema:
-    # JSON Schema defining the configuration options for the MCP.
     type: object
-    properties: {}
-  commandFunction:
-    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
-    |-
-    (config) => ({ command: 'node', args: ['dist/index.js'] })
-  exampleConfig: {}
+  commandFunction: |-
+    (config) => ({
+      "command": "node",
+      "args": [
+        "dist/index.js"
+      ],
+    }) 
